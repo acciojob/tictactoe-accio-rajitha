@@ -51,7 +51,7 @@ cells.forEach(cell => {
         cell.innerText = currentPlayer;
 
         if (checkWin()) {
-          messageDiv.innerText = `${currentPlayer === 'X' ? player1 : player2} wins!`;
+          messageDiv.innerText = `${currentPlayer === 'X' ? player1 : player2} congratulations you won!`;
           highlightWinningCells();
           gameStarted = false;
           setTimeout(resetGame, 3000); // Reset the game after 3 seconds
