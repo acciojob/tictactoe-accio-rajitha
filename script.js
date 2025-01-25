@@ -22,8 +22,6 @@ submitButton.addEventListener('click', () => {
     alert('Please enter names for both players!');
   }
 });
-
-// When a cell is clicked
 cells.forEach(cell => {
   cell.addEventListener('click', () => {
     const index = cell.id - 1;
@@ -41,7 +39,26 @@ cells.forEach(cell => {
     }
   });
 });
-
+// When a cell is clicked
+/*
+cells.forEach(cell => {
+  cell.addEventListener('click', () => {
+    const index = cell.id - 1;
+    if (!gameBoard[index]) {
+      gameBoard[index] = currentPlayer;
+      cell.innerText = currentPlayer;
+      if (checkWin()) {
+        messageDiv.innerText = `${currentPlayer === 'X' ? player1 : player2} congratulations you won!`;
+      } else if (gameBoard.every(cell => cell)) {
+        messageDiv.innerText = 'It\'s a tie!';
+      } else {
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        messageDiv.innerText = currentPlayer === 'X' ? `${player1}, you're up!` : `${player2}, you're up!`;
+      }
+    }
+  });
+});
+*/
 // Function to check if any player has won
 function checkWin() {
   const winPatterns = [
