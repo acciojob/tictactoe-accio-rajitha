@@ -55,3 +55,9 @@ button {
 h1 {
   margin-bottom: 20px;
 }
+.win {
+  background-color: lightgreen;
+  font-weight: bold;
+  color: black;
+}
+
